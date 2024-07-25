@@ -4,3 +4,36 @@
 npm install -g @angular/cli
 
 https://angular.dev/installation
+
+
+–––––– 24 July 2024
+–––––– Material UI
+ng add @angular/material
+
+https://material.angular.io/guide/getting-started
+
+
+
+–––––– Routing
+https://angular.dev/guide/routing/common-router-tasks
+
+
+–––––– 25 July 2024
+Reactive programming is programming with asynchronous data streams.
+
+
+https://www.youtube.com/watch?v=wwALXMU2hjg
+
+
+HttpClient is a build-in service class available in Angular.
+
+
+–––––– Command Line
+https://angular.dev/cli
+https://angular.dev/cli/generate/service
+
+
+ng generate service product
+
+
+https://rxjs-dev.firebaseapp.com/guide/overview
