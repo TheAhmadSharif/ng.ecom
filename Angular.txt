@@ -1,3 +1,6 @@
+npm install && ng serve 
+
+
 –––––– 22 July 2024
 
 –––––– Installation 

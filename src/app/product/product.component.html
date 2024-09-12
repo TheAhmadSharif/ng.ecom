@@ -1,26 +1,37 @@
-<mat-grid-list cols="3" class="mat-grid-list">
-    <ng-container>
-        <mat-grid-tile *ngFor="let object of products">
-
-
-            <mat-card class="product-card" style="height: 240px;">
-                <mat-card-header>
-                  <mat-card-title>{{ object.title }}</mat-card-title>
-                  <mat-card-subtitle><strong>Price: {{ object.price }} $</strong></mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="{{ object.images[0] }}" style="height: 140px;">
-                <mat-card-actions class="u-marginTopAuto">
-                  <a mat-button>View details</a>
-                </mat-card-actions>
-            </mat-card>
-
-        </mat-grid-tile>
-    </ng-container>
-</mat-grid-list>
-               
-
-
-       
-    
-    
+<div cols="row d-flex justify-content-between">
+  <div class="row">
+    <div class="col-3 my-4" *ngFor="let object of products">
    
+      <mat-card class="mat-card mat-focus-indicator box-shadow-md p-4" style="background: none;">
+        <!-- Image Section -->
+        <a href="javascript:void(0)">
+          <img mat-card-image src="{{ object.images[0] }}"  [alt]="object.title" style="max-height:160px; width: 100%;" />
+        </a>
+        
+        <!-- Card Content Section -->
+        <mat-card-content class="mat-card-content pt-3">
+          <p class="text-muted mb-0">
+            <a href="javascript:void(0)" style="text-decoration: none; color: inherit;">White T-Shirt</a>
+          </p>
+        
+          
+          <!-- Price Section -->
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <p class="accent-color" style="margin: 0; color: #e91e63; font-weight: bold;">$19.45</p>
+          </div>
+          
+          <!-- Add to Cart Button -->
+          <button mat-raised-button color="accent" class="mat-focus-indicator button-green">
+            Add to Cart
+          </button>
+        </mat-card-content>
+      
+        <!-- Offer Badge -->
+        <div class="offer-badge" style="position: absolute; top: 8px; left: 8px;">
+          
+        </div>
+      </mat-card>
+      
+    </div>
+  </div>
+</div>
