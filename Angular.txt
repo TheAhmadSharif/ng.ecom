@@ -40,3 +40,7 @@ ng generate service product
 
 
 https://rxjs-dev.firebaseapp.com/guide/overview
+
+
+
+ng build
