@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive  } from '@angular/router';
 import {MatListModule} from '@angular/material/list';
 
+import { CartService } from './service/cart.service';
+
 
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
@@ -25,4 +27,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
 })
 export class AppComponent {
   title = 'Ecommerce Shop';
+
+  constructor(public cartService: CartService) {
+    
+  }
+
+  
 }

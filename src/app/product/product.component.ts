@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ProductService } from '../product.service';
 import { CommonModule } from '@angular/common';
 
+import { CartService } from '../service/cart.service';
 
 
 import { MatButtonModule } from '@angular/material/button';
@@ -20,7 +21,10 @@ import {MatCardModule} from '@angular/material/card';
 export class ProductComponent {
 
   public products: any[] = [];
-  constructor (private _productService: ProductService) {
+  constructor (private _productService: ProductService,
+    public cartService: CartService
+
+  ) {
 
   }
 
@@ -31,5 +35,10 @@ export class ProductComponent {
 
           console.log(data.products, '________ Data ________')
         });
+  }
+
+  addToCart(product:any) {
+    console.log(product, '________ product ________')
+    this.cartService.addToCart(product);
   }
 }

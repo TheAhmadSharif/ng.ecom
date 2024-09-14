@@ -1,1 +1,90 @@
-<p>cart works!</p>
+
+
+
+@if (cartService.getItems().length < 1) {
+  <div class="d-flex justify-content-center mt-6">
+    <div>
+         <span class="text-center"> You don't have any items in your cart. Let's get shopping! </span>
+         <div class="text-center">
+           <a routerLink="/" class="btn btn-primary">Go To Shopping Page </a>
+         </div> <!-- End -->
+   </div> <!-- End -->
+  </div> <!-- End  -->
+}
+
+
+
+
+<div class="mt-6">
+    @if (cartService.getItems().length > 0) {
+      <div class="d-flex justify-content-center cart-heading">
+        <span class="text-uppercase fw-bold">Shopping Cart</span>
+    </div>  <!-- End block -->
+    
+  
+
+  
+      <div class="cart-product-block">
+        <div class="row">
+
+
+         <div class="col-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col"> Product </th>
+                <th scope="col"> Title </th>
+                <th scope="col"> Qty </th>
+                <th scope="col">Price</th>
+                <th scope="col">Remove</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              @for (object of products; track object.id; let idx = $index) {
+                  <tr>
+                    <th scope="row">{{ idx + 1 }}</th>
+                    <td> 
+
+                      <img mat-card-image src="{{ object.images[0] }}"  [alt]="object.title" style="max-height:80px; width: auto;" />
+
+
+                    </td>
+                    <td> {{ object.title }} </td>
+                    <td> 1 </td>
+                    <td> {{ object.price }} </td>
+                    <td> 
+                      
+                      <div class="remove" (click)="removeItem(idx)">x</div>
+
+
+                    </td>
+                    
+                  </tr>
+              }
+            </tbody>
+          </table>
+
+            <div class="d-flex flex-column align-items-end">
+              <div style="margin: 20px">
+                  <span class="total">Grand Total = </span><span class="price fw-bold">{{ totalAmount  }}<span class="currency">$</span></span>
+              </div> <!-- End -->
+            
+          </div> <!-- End subtotal -->
+         </div> <!-- End col -->
+
+
+            
+     
+        </div> <!-- End row -->
+      </div>   <!-- End product List --> 
+
+      
+    }
+   
+    
+
+    
+</div>  <!-- End cart container -->

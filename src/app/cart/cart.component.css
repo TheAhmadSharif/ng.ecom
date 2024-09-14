@@ -1,0 +1,21 @@
+.remove {
+    text-align: center;
+    vertical-align: middle;
+    display: table;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    background: #e0e0e0;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 50%;
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear;
+    width: 17px;
+    height: 17px;
+    margin: 0 0 0 20px
+}
+
+.remove:hover {
+    background: #f30
+}

@@ -1,7 +1,9 @@
 <div class="conatiner">
+
+
   <mat-grid-list cols="12">
       <img src="logo.png" alt="{{ title }}" style="height: 120px">
-    </mat-grid-list>
+  </mat-grid-list>
 
     
       <mat-grid-list cols="12">
@@ -9,18 +11,36 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a> 
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/product" routerLinkActive="active" ariaCurrentWhenActive="page">Product</a>
+         
+          <li><a class="nav-link" routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page">Cart
+
+            <span class="badge text-bg-primary">
+              {{ cartService.getItems().length }}
+
+            </span>
+
+
+
+
+
+          </a>
+            
+          
           </li>
-          <li><a class="nav-link" routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page">Cart</a></li>
         
         </ul>
       </mat-grid-list>
-      <router-outlet></router-outlet>
+
+      <div style="min-height: 70vh">
+        <router-outlet></router-outlet>
+      </div>  <!-- End Div -->
+
+     
+      
 
 
 
-      <footer class="m-4">
+      <footer class="f-container">
         Copyright 2024. All rights reserved.
       </footer>
 
