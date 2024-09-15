@@ -43,4 +43,10 @@ https://rxjs-dev.firebaseapp.com/guide/overview
 
 
 
-ng build
+
+
+Build 
+
+
+
+ng build --base-href='https://theahmadsharif.github.io/ng.ecom/'

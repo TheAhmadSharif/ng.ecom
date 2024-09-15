@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CartService } from '../service/cart.service';
 import {MatTableModule} from '@angular/material/table';
 
+import { RouterOutlet, RouterLink, RouterLinkActive  } from '@angular/router';
 
 interface Product {
   id: number;
@@ -16,7 +17,12 @@ interface Product {
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [MatTableModule],
+  imports: [MatTableModule,
+    RouterOutlet, 
+    RouterLink,
+    RouterLinkActive
+
+  ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })

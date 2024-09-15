@@ -1,12 +1,12 @@
 <div class="conatiner">
 
-
   <mat-grid-list cols="12">
-      <img src="logo.png" alt="{{ title }}" style="height: 120px">
-  </mat-grid-list>
 
-    
-      <mat-grid-list cols="12">
+      <a  routerLink="/">
+        <img src="logo.png" alt="{{ title }}" style="height: 120px">
+      </a> 
+  </mat-grid-list>
+      <div class="col-12">
         <ul class="nav">
           <li class="nav-item">
             <a class="nav-link" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a> 
@@ -29,16 +29,11 @@
           </li>
         
         </ul>
-      </mat-grid-list>
+      </div>
 
       <div style="min-height: 70vh">
         <router-outlet></router-outlet>
       </div>  <!-- End Div -->
-
-     
-      
-
-
 
       <footer class="f-container">
         Copyright 2024. All rights reserved.
